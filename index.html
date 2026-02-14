@@ -1,577 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KissKH K-Dramas & Asian Shows 2026 - Free Watch Links</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KissKH Hub • Premium Asian Drama Streaming Links 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #0f0f0f;
-      color: #e0e0e0;
-      font-family: Arial, Helvetica, sans-serif;
+    :root {
+      --bg: #0a0a0f;
+      --card: #111118;
+      --accent: #ff2e63;
+      --accent-glow: rgba(255, 46, 99, 0.25);
+      --text: #e0e0ff;
+      --text-muted: #a0a0cc;
+      --border: rgba(255, 46, 99, 0.12);
+    }
+
+    * {
       margin: 0;
-      padding: 20px;
-      line-height: 1.5;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(255,46,99,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(100,200,255,0.06) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(to bottom, rgba(10,10,15,0.9), transparent);
+    }
+
     h1 {
-      color: #ff3366;
-      text-align: center;
-      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      background: linear-gradient(90deg, #ff2e63, #ff758c, #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+      text-shadow: 0 0 40px rgba(255,46,99,0.4);
     }
-    .subtitle {
-      text-align: center;
-      color: #aaa;
-      margin-bottom: 30px;
-      font-size: 1.1em;
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 1rem auto;
+      line-height: 1.6;
     }
+
+    .search-container {
+      position: relative;
+      max-width: 700px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+
     #search {
       width: 100%;
-      max-width: 700px;
-      padding: 14px;
-      font-size: 18px;
-      margin: 0 auto 30px;
-      display: block;
-      border: none;
-      border-radius: 8px;
-      background: #1e1e1e;
+      padding: 1.1rem 1.5rem 1.1rem 4.2rem;
+      font-size: 1.1rem;
+      background: rgba(17,17,24,0.7);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: white;
+      backdrop-filter: blur(16px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    #search:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-glow);
+      background: rgba(17,17,24,0.9);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent);
+      font-size: 1.3rem;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.6rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      opacity: 0;
+      transform: translateY(30px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 25px 60px rgba(255,46,99,0.18);
+      border-color: rgba(255,46,99,0.4);
+    }
+
+    .card-content {
+      padding: 1.6rem;
+    }
+
+    .title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+      line-height: 1.3;
       color: white;
     }
-    #search::placeholder {
-      color: #888;
-    }
-    .drama-list {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .drama {
-      background: #1a1a1a;
-      padding: 16px;
-      margin-bottom: 12px;
-      border-radius: 8px;
-      border-left: 4px solid #ff3366;
-      transition: all 0.2s;
-    }
-    .drama:hover {
-      transform: translateX(5px);
-      box-shadow: 0 4px 15px rgba(255,51,102,0.15);
-    }
-    .title {
-      margin: 0 0 8px 0;
-      font-size: 1.3em;
-      color: #ffffff;
-    }
-    .link {
-      color: #00ccff;
+
+    .watch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.4rem;
+      background: linear-gradient(135deg, #ff2e63, #ff5c7c);
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(255,46,99,0.3);
     }
-    .link:hover {
-      text-decoration: underline;
+
+    .watch-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255,46,99,0.45);
+      background: linear-gradient(135deg, #ff5c7c, #ff2e63);
     }
-    .year {
-      color: #aaa;
-      font-size: 0.95em;
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 6rem 1rem;
+      color: var(--text-muted);
+      font-size: 1.3rem;
     }
+
     @media (max-width: 600px) {
-      body { padding: 15px; }
-      h1 { font-size: 1.8em; }
-      .subtitle { font-size: 1em; }
+      header { padding: 3rem 1rem 1.5rem; }
+      h1 { font-size: 3.2rem; }
+      .container { padding: 0 1rem 3rem; gap: 1.2rem; }
     }
   </style>
 </head>
 <body>
 
-<h1>KissKH Asian Dramas & Shows 2026</h1>
-<p class="subtitle">Direct links to latest K-dramas, C-dramas, Thai BL & more – free streaming on KissKH</p>
-
-<input type="text" id="search" placeholder="Search drama name (e.g. Squid Game, Lovely Runner)..." onkeyup="filterDramas()">
-
-<div class="drama-list" id="dramaList">
-
-  <div class="drama">
-    <p class="title">Strobe Edge Season 2 (2026)</p>
-    <a href="https://kisskh.it/tvshows/strobe-edge-season-2-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">I Wanna Be Suptar (2026)</p>
-    <a href="https://kisskh.it/tvshows/i-wanna-be-suptar-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Cosmetic Playlover Season 2 (2025)</p>
-    <a href="https://kisskh.it/tvshows/cosmetic-playlover-season-2-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Battle of Fates (2026)</p>
-    <a href="https://kisskh.it/tvshows/battle-of-fates-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Frozen Valentine (2026)</p>
-    <a href="https://kisskh.it/tvshows/frozen-valentine-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Lush Mountains (2021)</p>
-    <a href="https://kisskh.it/tvshows/lush-mountains-2021/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Naive Leader (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-naive-leader-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">His Man Season 4 (2026)</p>
-    <a href="https://kisskh.it/tvshows/his-man-season-4-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Love Unseen Beneath the Clear Night Sky (2025)</p>
-    <a href="https://kisskh.it/tvshows/love-unseen-beneath-the-clear-night-sky-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">A Summer Meant for Us (2026)</p>
-    <a href="https://kisskh.it/tvshows/a-summer-meant-for-us-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <!-- More dramas below – I added all of them -->
-
-  <div class="drama">
-    <p class="title">The Seven Legends (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-seven-legends-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Art of Sarah (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-art-of-sarah-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Heart Code (2026)</p>
-    <a href="https://kisskh.it/tvshows/heart-code-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Fan Service (2026)</p>
-    <a href="https://kisskh.it/tvshows/fan-service-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Fall in Love Again (2026)</p>
-    <a href="https://kisskh.it/tvshows/fall-in-love-again-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Shall We Dance (2026)</p>
-    <a href="https://kisskh.it/tvshows/shall-we-dance-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Hidden Truth (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-hidden-truth-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Young Again (2026)</p>
-    <a href="https://kisskh.it/tvshows/young-again-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Yesterday (2026)</p>
-    <a href="https://kisskh.it/tvshows/yesterday-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Mysterious and Absurd Cases of the Tang Dynasty (2026)</p>
-    <a href="https://kisskh.it/tvshows/mysterious-and-absurd-cases-of-the-tang-dynasty-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">I Live Alone (2013)</p>
-    <a href="https://kisskh.it/tvshows/i-live-alone-2013/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Mr. Kurosaki's Pure Love Never Stops (2026)</p>
-    <a href="https://kisskh.it/tvshows/mr-kurosakis-pure-love-never-stops-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Silent Truth (2026)</p>
-    <a href="https://kisskh.it/tvshows/silent-truth-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Love After Addiction (2026)</p>
-    <a href="https://kisskh.it/tvshows/love-after-addiction-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">How Dare You (2026)</p>
-    <a href="https://kisskh.it/tvshows/how-dare-you-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Unveil Jadewind (2026)</p>
-    <a href="https://kisskh.it/tvshows/unveil-jadewind-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Singles Inferno Season 5 (2026)</p>
-    <a href="https://kisskh.it/tvshows/singles-inferno-season-5-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Countdown to Yes (2026)</p>
-    <a href="https://kisskh.it/tvshows/countdown-to-yes-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Cat for Cash (2026)</p>
-    <a href="https://kisskh.it/tvshows/cat-for-cash-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Peach Lover (2026)</p>
-    <a href="https://kisskh.it/tvshows/peach-lover-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Boyfriend (2024)</p>
-    <a href="https://kisskh.it/tvshows/the-boyfriend-2024/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Bloody Flower (2026)</p>
-    <a href="https://kisskh.it/tvshows/bloody-flower-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Our Universe (2026)</p>
-    <a href="https://kisskh.it/tvshows/our-universe-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Honour (2026)</p>
-    <a href="https://kisskh.it/tvshows/honour-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Soda Master (2026)</p>
-    <a href="https://kisskh.it/tvshows/soda-master-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Matori and Kyoken (2026)</p>
-    <a href="https://kisskh.it/tvshows/matori-and-kyoken-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Secret Friends Club (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-secret-friends-club-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Glory Fades (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-glory-fades-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Heart of Yiwha of Love Vengeance (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-heart-of-yiwha-of-love-vengeance-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Beauty Reborn (2025)</p>
-    <a href="https://kisskh.it/tvshows/beauty-reborn-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Muteluv (2025)</p>
-    <a href="https://kisskh.it/tvshows/muteluv-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">I'm Kishi Knight, Your Private Tutor (2026)</p>
-    <a href="https://kisskh.it/tvshows/im-kishi-knight-your-private-tutor-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Gimbap and Onigiri (2026)</p>
-    <a href="https://kisskh.it/tvshows/gimbap-and-onigiri-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Love in Protocol (2026)</p>
-    <a href="https://kisskh.it/tvshows/love-in-protocol-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Tide of Love (2025)</p>
-    <a href="https://kisskh.it/tvshows/tide-of-love-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Truth (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-truth-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Love Is Real (2026)</p>
-    <a href="https://kisskh.it/tvshows/love-is-real-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Surely Tomorrow (2025)</p>
-    <a href="https://kisskh.it/tvshows/surely-tomorrow-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Villains (2025)</p>
-    <a href="https://kisskh.it/tvshows/villains-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Pro Bono (2025)</p>
-    <a href="https://kisskh.it/tvshows/pro-bono-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Earth (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-earth-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Reloved (2025)</p>
-    <a href="https://kisskh.it/tvshows/reloved-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Love Alert (2025)</p>
-    <a href="https://kisskh.it/tvshows/love-alert-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Bake Your Dream (2026)</p>
-    <a href="https://kisskh.it/tvshows/bake-your-dream-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Imperial Coroner (2021)</p>
-    <a href="https://kisskh.it/tvshows/the-imperial-coroner-2021/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The 300 Loyal Ghosts (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-300-loyal-ghosts-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Squid Game Season 3 (2025)</p>
-    <a href="https://kisskh.it/tvshows/squid-game-season-3-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Squid Game Season 2 (2024)</p>
-    <a href="https://kisskh.it/tvshows/squid-game-season-2-2024/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Squid Game (2021)</p>
-    <a href="https://kisskh.it/tvshows/squid-game-2021/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Lovex Mini Series: Roommates in Love (2026)</p>
-    <a href="https://kisskh.it/tvshows/lovex-mini-series-roommates-in-love-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Ancient Bracelet (2026)</p>
-    <a href="https://kisskh.it/tvshows/ancient-bracelet-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">No Pain No Gain (2026)</p>
-    <a href="https://kisskh.it/tvshows/no-pain-no-gain-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Boy Next World: My Destiny (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-boy-next-world-my-destiny-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Good Boy (2025)</p>
-    <a href="https://kisskh.it/tvshows/good-boy-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">To My Beloved Thief (2026)</p>
-    <a href="https://kisskh.it/tvshows/to-my-beloved-thief-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Positively Yours (2026)</p>
-    <a href="https://kisskh.it/tvshows/positively-yours-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Be My Angel (2026)</p>
-    <a href="https://kisskh.it/tvshows/be-my-angel-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">First Man (2025)</p>
-    <a href="https://kisskh.it/tvshows/first-man-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Judge Returns (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-judge-returns-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Born to Be Alive (2026)</p>
-    <a href="https://kisskh.it/tvshows/born-to-be-alive-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Goddess Bless You From Death (2025)</p>
-    <a href="https://kisskh.it/tvshows/goddess-bless-you-from-death-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Melody of Secrets (2025)</p>
-    <a href="https://kisskh.it/tvshows/melody-of-secrets-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Guilty (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-guilty-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">My Page in the 90s (2026)</p>
-    <a href="https://kisskh.it/tvshows/my-page-in-the-90s-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Glamorous Night (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-glamorous-night-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Long Snake Takes a Wife (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-long-snake-takes-a-wife-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Unseen (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-unseen-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Blood of Youth: Quest of Heroic Hearts (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-blood-of-youth-quest-of-heroic-hearts-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Affinity (2026)</p>
-    <a href="https://kisskh.it/tvshows/affinity-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">The Inner Eye (2026)</p>
-    <a href="https://kisskh.it/tvshows/the-inner-eye-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">How to Train Your Killer (2026)</p>
-    <a href="https://kisskh.it/tvshows/how-to-train-your-killer-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Half Awake (2026)</p>
-    <a href="https://kisskh.it/tvshows/half-awake-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Swords Into Plowshares (2026)</p>
-    <a href="https://kisskh.it/tvshows/swords-into-plowshares-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">No Tail to Tell (2026)</p>
-    <a href="https://kisskh.it/tvshows/no-tail-to-tell-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Recipe for Love (2026)</p>
-    <a href="https://kisskh.it/tvshows/recipe-for-love-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">My Romance Scammer (2026)</p>
-    <a href="https://kisskh.it/tvshows/my-romance-scammer-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Duang With You (2026)</p>
-    <a href="https://kisskh.it/tvshows/duang-with-you-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Original Sin Season 2 (2026)</p>
-    <a href="https://kisskh.it/tvshows/original-sin-season-2-2026/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Let Me Into Your Heart</p>
-    <a href="https://kisskh.it/tvshows/let-me-into-your-heart/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">A Graceful Liar (2025)</p>
-    <a href="https://kisskh.it/tvshows/a-graceful-liar-2025/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Head Over Heels</p>
-    <a href="https://kisskh.it/tvshows/head-over-heels/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Spring Fever</p>
-    <a href="https://kisskh.it/tvshows/spring-fever/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Once More, Love in 1995</p>
-    <a href="https://kisskh.it/tvshows/once-more-love-in-1995/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
-  <div class="drama">
-    <p class="title">Undercover Miss Hong</p>
-    <a href="https://kisskh.it/tvshows/undercover-miss-hong/" class="link" target="_blank">Watch on KissKH →</a>
-  </div>
-
+<header>
+  <h1>KissKH Hub</h1>
+  <p class="tagline">Premium Links • Latest Asian Dramas & Series • 2025–2026 • HD Streaming</p>
+</header>
+
+<div class="search-container">
+  <span class="search-icon">🔍</span>
+  <input type="text" id="search" placeholder="Search drama (Squid Game, Lovely Runner, BL...)">
+</div>
+
+<div class="container" id="dramaContainer">
+  <!-- All cards will be inserted here by JS -->
 </div>
 
 <script>
-function filterDramas() {
-  const input = document.getElementById('search').value.toLowerCase();
-  const items = document.querySelectorAll('.drama');
+// List of your dramas (title + url)
+const dramas = [
+  { title: "Strobe Edge Season 2 (2026)", url: "https://kisskh.it/tvshows/strobe-edge-season-2-2026/" },
+  { title: "I Wanna Be Suptar (2026)", url: "https://kisskh.it/tvshows/i-wanna-be-suptar-2026/" },
+  { title: "Cosmetic Playlover Season 2 (2025)", url: "https://kisskh.it/tvshows/cosmetic-playlover-season-2-2025/" },
+  { title: "Battle of Fates (2026)", url: "https://kisskh.it/tvshows/battle-of-fates-2026/" },
+  { title: "Frozen Valentine (2026)", url: "https://kisskh.it/tvshows/frozen-valentine-2026/" },
+  { title: "Lush Mountains (2021)", url: "https://kisskh.it/tvshows/lush-mountains-2021/" },
+  { title: "The Naive Leader (2026)", url: "https://kisskh.it/tvshows/the-naive-leader-2026/" },
+  { title: "His Man Season 4 (2026)", url: "https://kisskh.it/tvshows/his-man-season-4-2026/" },
+  { title: "Love Unseen Beneath the Clear Night Sky (2025)", url: "https://kisskh.it/tvshows/love-unseen-beneath-the-clear-night-sky-2025/" },
+  { title: "A Summer Meant for Us (2026)", url: "https://kisskh.it/tvshows/a-summer-meant-for-us-2026/" },
+  { title: "The Seven Legends (2026)", url: "https://kisskh.it/tvshows/the-seven-legends-2026/" },
+  { title: "The Art of Sarah (2026)", url: "https://kisskh.it/tvshows/the-art-of-sarah-2026/" },
+  { title: "Heart Code (2026)", url: "https://kisskh.it/tvshows/heart-code-2026/" },
+  { title: "Fan Service (2026)", url: "https://kisskh.it/tvshows/fan-service-2026/" },
+  { title: "Fall in Love Again (2026)", url: "https://kisskh.it/tvshows/fall-in-love-again-2026/" },
+  { title: "Shall We Dance (2026)", url: "https://kisskh.it/tvshows/shall-we-dance-2026/" },
+  { title: "The Hidden Truth (2026)", url: "https://kisskh.it/tvshows/the-hidden-truth-2026/" },
+  { title: "Young Again (2026)", url: "https://kisskh.it/tvshows/young-again-2026/" },
+  { title: "Yesterday (2026)", url: "https://kisskh.it/tvshows/yesterday-2026/" },
+  { title: "Mysterious and Absurd Cases of the Tang Dynasty (2026)", url: "https://kisskh.it/tvshows/mysterious-and-absurd-cases-of-the-tang-dynasty-2026/" },
+  { title: "I Live Alone (2013)", url: "https://kisskh.it/tvshows/i-live-alone-2013/" },
+  { title: "Mr. Kurosaki's Pure Love Never Stops (2026)", url: "https://kisskh.it/tvshows/mr-kurosakis-pure-love-never-stops-2026/" },
+  { title: "Silent Truth (2026)", url: "https://kisskh.it/tvshows/silent-truth-2026/" },
+  { title: "Love After Addiction (2026)", url: "https://kisskh.it/tvshows/love-after-addiction-2026/" },
+  { title: "How Dare You (2026)", url: "https://kisskh.it/tvshows/how-dare-you-2026/" },
+  { title: "Unveil Jadewind (2026)", url: "https://kisskh.it/tvshows/unveil-jadewind-2026/" },
+  { title: "Singles Inferno Season 5 (2026)", url: "https://kisskh.it/tvshows/singles-inferno-season-5-2026/" },
+  { title: "Countdown to Yes (2026)", url: "https://kisskh.it/tvshows/countdown-to-yes-2026/" },
+  { title: "Cat for Cash (2026)", url: "https://kisskh.it/tvshows/cat-for-cash-2026/" },
+  { title: "Peach Lover (2026)", url: "https://kisskh.it/tvshows/peach-lover-2026/" },
+  { title: "The Boyfriend (2024)", url: "https://kisskh.it/tvshows/the-boyfriend-2024/" },
+  { title: "Bloody Flower (2026)", url: "https://kisskh.it/tvshows/bloody-flower-2026/" },
+  { title: "Our Universe (2026)", url: "https://kisskh.it/tvshows/our-universe-2026/" },
+  { title: "Honour (2026)", url: "https://kisskh.it/tvshows/honour-2026/" },
+  { title: "Soda Master (2026)", url: "https://kisskh.it/tvshows/soda-master-2026/" },
+  { title: "Matori and Kyoken (2026)", url: "https://kisskh.it/tvshows/matori-and-kyoken-2026/" },
+  { title: "The Secret Friends Club (2026)", url: "https://kisskh.it/tvshows/the-secret-friends-club-2026/" },
+  { title: "The Glory Fades (2026)", url: "https://kisskh.it/tvshows/the-glory-fades-2026/" },
+  { title: "The Heart of Yiwha of Love Vengeance (2026)", url: "https://kisskh.it/tvshows/the-heart-of-yiwha-of-love-vengeance-2026/" },
+  { title: "Beauty Reborn (2025)", url: "https://kisskh.it/tvshows/beauty-reborn-2025/" },
+  { title: "Muteluv (2025)", url: "https://kisskh.it/tvshows/muteluv-2025/" },
+  { title: "I'm Kishi Knight, Your Private Tutor (2026)", url: "https://kisskh.it/tvshows/im-kishi-knight-your-private-tutor-2026/" },
+  { title: "Gimbap and Onigiri (2026)", url: "https://kisskh.it/tvshows/gimbap-and-onigiri-2026/" },
+  { title: "Love in Protocol (2026)", url: "https://kisskh.it/tvshows/love-in-protocol-2026/" },
+  { title: "Tide of Love (2025)", url: "https://kisskh.it/tvshows/tide-of-love-2025/" },
+  { title: "The Truth (2026)", url: "https://kisskh.it/tvshows/the-truth-2026/" },
+  { title: "Love Is Real (2026)", url: "https://kisskh.it/tvshows/love-is-real-2026/" },
+  { title: "Surely Tomorrow (2025)", url: "https://kisskh.it/tvshows/surely-tomorrow-2025/" },
+  { title: "Villains (2025)", url: "https://kisskh.it/tvshows/villains-2025/" },
+  { title: "Pro Bono (2025)", url: "https://kisskh.it/tvshows/pro-bono-2025/" },
+  { title: "The Earth (2026)", url: "https://kisskh.it/tvshows/the-earth-2026/" },
+  { title: "Reloved (2025)", url: "https://kisskh.it/tvshows/reloved-2025/" },
+  { title: "Love Alert (2025)", url: "https://kisskh.it/tvshows/love-alert-2025/" },
+  { title: "Bake Your Dream (2026)", url: "https://kisskh.it/tvshows/bake-your-dream-2026/" },
+  { title: "The Imperial Coroner (2021)", url: "https://kisskh.it/tvshows/the-imperial-coroner-2021/" },
+  { title: "The 300 Loyal Ghosts (2026)", url: "https://kisskh.it/tvshows/the-300-loyal-ghosts-2026/" },
+  { title: "Squid Game Season 3 (2025)", url: "https://kisskh.it/tvshows/squid-game-season-3-2025/" },
+  { title: "Squid Game Season 2 (2024)", url: "https://kisskh.it/tvshows/squid-game-season-2-2024/" },
+  { title: "Squid Game (2021)", url: "https://kisskh.it/tvshows/squid-game-2021/" },
+  { title: "Lovex Mini Series: Roommates in Love (2026)", url: "https://kisskh.it/tvshows/lovex-mini-series-roommates-in-love-2026/" },
+  { title: "Ancient Bracelet (2026)", url: "https://kisskh.it/tvshows/ancient-bracelet-2026/" },
+  { title: "No Pain No Gain (2026)", url: "https://kisskh.it/tvshows/no-pain-no-gain-2026/" },
+  { title: "The Boy Next World: My Destiny (2026)", url: "https://kisskh.it/tvshows/the-boy-next-world-my-destiny-2026/" },
+  { title: "Good Boy (2025)", url: "https://kisskh.it/tvshows/good-boy-2025/" },
+  { title: "To My Beloved Thief (2026)", url: "https://kisskh.it/tvshows/to-my-beloved-thief-2026/" },
+  { title: "Positively Yours (2026)", url: "https://kisskh.it/tvshows/positively-yours-2026/" },
+  { title: "Be My Angel (2026)", url: "https://kisskh.it/tvshows/be-my-angel-2026/" },
+  { title: "First Man (2025)", url: "https://kisskh.it/tvshows/first-man-2025/" },
+  { title: "The Judge Returns (2026)", url: "https://kisskh.it/tvshows/the-judge-returns-2026/" },
+  { title: "Born to Be Alive (2026)", url: "https://kisskh.it/tvshows/born-to-be-alive-2026/" },
+  { title: "Goddess Bless You From Death (2025)", url: "https://kisskh.it/tvshows/goddess-bless-you-from-death-2025/" },
+  { title: "Melody of Secrets (2025)", url: "https://kisskh.it/tvshows/melody-of-secrets-2025/" },
+  { title: "The Guilty (2026)", url: "https://kisskh.it/tvshows/the-guilty-2026/" },
+  { title: "My Page in the 90s (2026)", url: "https://kisskh.it/tvshows/my-page-in-the-90s-2026/" },
+  { title: "The Glamorous Night (2026)", url: "https://kisskh.it/tvshows/the-glamorous-night-2026/" },
+  { title: "The Long Snake Takes a Wife (2026)", url: "https://kisskh.it/tvshows/the-long-snake-takes-a-wife-2026/" },
+  { title: "The Unseen (2026)", url: "https://kisskh.it/tvshows/the-unseen-2026/" },
+  { title: "The Blood of Youth: Quest of Heroic Hearts (2026)", url: "https://kisskh.it/tvshows/the-blood-of-youth-quest-of-heroic-hearts-2026/" },
+  { title: "Affinity (2026)", url: "https://kisskh.it/tvshows/affinity-2026/" },
+  { title: "The Inner Eye (2026)", url: "https://kisskh.it/tvshows/the-inner-eye-2026/" },
+  { title: "How to Train Your Killer (2026)", url: "https://kisskh.it/tvshows/how-to-train-your-killer-2026/" },
+  { title: "Half Awake (2026)", url: "https://kisskh.it/tvshows/half-awake-2026/" },
+  { title: "Swords Into Plowshares (2026)", url: "https://kisskh.it/tvshows/swords-into-plowshares-2026/" },
+  { title: "No Tail to Tell (2026)", url: "https://kisskh.it/tvshows/no-tail-to-tell-2026/" },
+  { title: "Recipe for Love (2026)", url: "https://kisskh.it/tvshows/recipe-for-love-2026/" },
+  { title: "My Romance Scammer (2026)", url: "https://kisskh.it/tvshows/my-romance-scammer-2026/" },
+  { title: "Duang With You (2026)", url: "https://kisskh.it/tvshows/duang-with-you-2026/" },
+  { title: "Original Sin Season 2 (2026)", url: "https://kisskh.it/tvshows/original-sin-season-2-2026/" },
+  { title: "Let Me Into Your Heart", url: "https://kisskh.it/tvshows/let-me-into-your-heart/" },
+  { title: "A Graceful Liar (2025)", url: "https://kisskh.it/tvshows/a-graceful-liar-2025/" },
+  { title: "Head Over Heels", url: "https://kisskh.it/tvshows/head-over-heels/" },
+  { title: "Spring Fever", url: "https://kisskh.it/tvshows/spring-fever/" },
+  { title: "Once More, Love in 1995", url: "https://kisskh.it/tvshows/once-more-love-in-1995/" },
+  { title: "Undercover Miss Hong", url: "https://kisskh.it/tvshows/undercover-miss-hong/" }
+];
 
-  items.forEach(item => {
-    const title = item.querySelector('.title').textContent.toLowerCase();
-    item.style.display = title.includes(input) ? '' : 'none';
+// Create cards
+const container = document.getElementById('dramaContainer');
+
+dramas.forEach((drama, index) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="card-content">
+      <div class="title">${drama.title}</div>
+      <a href="${drama.url}" class="watch-btn" target="_blank" rel="noopener noreferrer">
+        <span>▶ Watch Now</span>
+      </a>
+    </div>
+  `;
+  container.appendChild(card);
+
+  // Staggered entrance animation
+  setTimeout(() => {
+    card.classList.add('visible');
+  }, 80 + index * 40);
+});
+
+// Real-time search with highlight
+const searchInput = document.getElementById('search');
+
+searchInput.addEventListener('input', (e) => {
+  const term = e.target.value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.card');
+
+  let hasResults = false;
+
+  cards.forEach(card => {
+    const titleEl = card.querySelector('.title');
+    const title = titleEl.textContent.toLowerCase();
+
+    if (term === '') {
+      card.style.display = '';
+      card.classList.remove('visible'); // reset for animation if needed
+      setTimeout(() => card.classList.add('visible'), 100);
+      hasResults = true;
+    } else if (title.includes(term)) {
+      card.style.display = '';
+      // Simple highlight
+      const regex = new RegExp(`(${term})`, 'gi');
+      titleEl.innerHTML = titleEl.textContent.replace(regex, '<span style="background:rgba(255,46,99,0.3);padding:2px 4px;border-radius:4px;">$1</span>');
+      hasResults = true;
+    } else {
+      card.style.display = 'none';
+    }
   });
-}
+
+  // Show no results message
+  let noRes = document.querySelector('.no-results');
+  if (!hasResults && term !== '') {
+    if (!noRes) {
+      noRes = document.createElement('div');
+      noRes.className = 'no-results';
+      noRes.textContent = "No dramas found matching your search... 😔";
+      container.appendChild(noRes);
+    }
+  } else if (noRes) {
+    noRes.remove();
+  }
+});
 </script>
 
 </body>
